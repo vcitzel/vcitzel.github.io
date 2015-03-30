@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="row mt">
+  <div class="col-lg-6 col-lg-offset-3 centered">
+    <h3 class="section"><a href="/{{ page.collection }}">{{ page.collection }}</a></h3>
+    <hr />
+    {% if page.description %}
+    <p>{{ page.description }}</p>
+    {% else %}
+    <h4>{{ page.title }}</h4>
+    {% endif %}
+  </div>
+</div>
+
+<div class="row mt js-with-images">
+  {{ content }}
+  <div class="js-previews big-images-grid">
+  </div>
+</div>

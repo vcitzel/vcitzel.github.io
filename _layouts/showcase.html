@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="row mt">
+  <div class="col-lg-6 col-lg-offset-3 centered">
+    <h3>{{ page.title }}</h3>
+    <hr>
+    <p>{{ page.description }}</p>
+  </div>
+</div>
+
+<div class="row mt centered showcase">
+  {% for doc in site.collections[page.collection].docs %}
+  {% if doc.title != page.title %}
+  <div class="col-lg-4">
+    <a href="{{ doc.url }}">
+      <figure>
+        <img src="{{ doc.url | replace:'html','jpg' }}" alt="{{ doc.title }}" class="img-responsive centered-and-cropped" />
+      </figure>
+      <p>{{ doc.title }}</p>
+    </a>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>

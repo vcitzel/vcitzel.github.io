@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="row mt">
+  <div class="col-lg-6 col-lg-offset-3 centered">
+    <h3>{{ page.title }}</h3>
+    {% if page.description %}
+    <hr />
+    <p>{{ page.description }}</p>
+    {% endif %}
+  </div>
+</div>
+
+{% unless page.description %}
+<div class="row mt"></div>
+{% endunless %}
+
+<div class="mt js-with-images">
+  {{ content }}
+  <div class="js-previews images-grid">
+  </div>
+</div>
